@@ -8,20 +8,33 @@ declare -A dict
 
 for (( i=1; i<=$flipCount; i++ ))
 do
-        flipResult=$((RANDOM%4))
+        flipResult=$((RANDOM%8))
 	case $flipResult in
 		0)
-                	dict[$i]="HH"
+                	dict[$i]="HHH"
 			;;
 		1)
-                	dict[$i]="HT"
+                	dict[$i]="HHT"
 			;;
 		2)
-			dict[$i]="TH"
+			dict[$i]="HTH"
 			;;
 		3)
-			dict[$i]="TT"
+			dict[$i]="THH"
 			;;
+		4)
+			dict[$i]="HTT"
+			;;
+                5)
+                        dict[$i]="TTH"
+                        ;;
+                6)
+                        dict[$i]="THT"
+                        ;;
+                7)
+                        dict[$i]="TTT"
+                        ;;
+
 	esac
 done
 
